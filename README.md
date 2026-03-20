@@ -5,7 +5,7 @@ A simple To-Do List web app built while learning HTML, CSS, and JavaScript.
 ---
 
 ## 🖼️ Preview
-![App Screenshot](image/Screenshot.png)
+![App Screenshot](images/screenshot.png)
 
 ---
 
