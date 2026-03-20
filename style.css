@@ -15,7 +15,7 @@
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 30px 50px;
     border-radius: 10px;
 }
 .todo-app h2 {
@@ -35,7 +35,7 @@
     background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
 }
 input {
     flex: 1;
@@ -54,6 +54,45 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    transition: background 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+button:hover {
+    background: #e04535;
+}
+.task-counter {
+    text-align: right;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: #888;
+}
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.filter-btn {
+    flex: 1;
+    padding: 8px 0;
+    border: 2px solid #edeef0;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.filter-btn:hover {
+    border-color: #ff5945;
+    color: #ff5945;
+}
+.filter-btn.active {
+    background: #ff5945;
+    border-color: #ff5945;
+    color: #fff;
+    font-weight: 600;
 }
 ul li {
     list-style: none;
@@ -62,6 +101,11 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.2s;
+}
+ul li:last-child {
+    border-bottom: none;
 }
 ul li::before {
     content: '';
@@ -93,7 +137,15 @@ ul li span {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    transition: background 0.2s;
 }
 ul li span:hover {
     background: #edeef0;
+}
+.empty-state {
+    display: none; /* shown via JS */
+    text-align: center;
+    padding: 30px 0 10px;
+    color: #aaa;
+    font-size: 15px;
 }
